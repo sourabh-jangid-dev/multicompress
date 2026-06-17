@@ -42,6 +42,22 @@ Built with Python + FFmpeg. No subscriptions, no internet required. **Your files
 
 ---
 
+## ⬇️ Download & Install (Windows — no Python needed)
+
+1. Go to the **[Releases page](https://github.com/sourabh-jangid-dev/multicompress/releases/latest)** and download **`MultiCompress-v1.0.0.zip`**.
+2. **Unzip** it anywhere.
+3. Double-click **`MultiCompress.exe`**. That's it — FFmpeg is bundled inside, nothing else to install.
+
+### ⚠️ "Windows protected your PC"? — it's safe, here's why
+
+When you run it the first time, Windows **SmartScreen** may show a blue warning. This is **normal for every new open-source app** — it appears because the app isn't signed with an expensive certificate yet, *not* because it's harmful.
+
+**To run it:** click **"More info"** → **"Run anyway."**
+
+You can verify it's safe yourself: the **full source code is right here in this repo**, and the app makes **zero internet connections** — everything happens offline on your machine. The warning will disappear on its own as more people download it. 🛡️
+
+---
+
 ## 🎥 Demo
 
 <p align="center">
