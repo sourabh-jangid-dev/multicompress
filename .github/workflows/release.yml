@@ -1,0 +1,35 @@
+name: Build Release EXE
+
+# When you push a version tag like v1.0.0, build the .exe and attach it
+# to a GitHub Release automatically. Creators just download the zip.
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+
+      - name: Build EXE
+        run: python build_exe.py
+
+      - name: Zip the app
+        run: Compress-Archive -Path dist/MultiCompress/* -DestinationPath MultiCompress-${{ github.ref_name }}.zip
+
+      - name: Upload to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: MultiCompress-${{ github.ref_name }}.zip

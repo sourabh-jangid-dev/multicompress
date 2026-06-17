@@ -1,0 +1,25 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# ---- Build output (PyInstaller) ----
+build/
+dist/
+*.spec
+*.spec.bak
+
+# ---- App output / test artifacts ----
+compressed_output/
+output/
+*.log
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

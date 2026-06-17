@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MultiCompress — Compress video, images, audio & PDF. 100% free & offline.</title>
+<meta name="description" content="A free, offline desktop app to compress videos, images, audio and PDFs. No watermarks, no uploads, no subscriptions.">
+<style>
+  :root{
+    --bg:#0b1020; --bg2:#0f172a; --card:#131c33; --line:#243049;
+    --text:#e6edf7; --muted:#94a3b8; --blue:#3b82f6; --blue2:#1d4ed8; --green:#34d399;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI",system-ui,-apple-system,sans-serif;background:
+       radial-gradient(1200px 600px at 50% -200px,#1e2a52 0%,var(--bg) 60%);
+       color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+  a{color:inherit;text-decoration:none}
+
+  /* Hero */
+  header{padding:64px 0 36px;text-align:center}
+  .logo{width:104px;height:104px;border-radius:26px;display:block;margin:0 auto 22px;
+        box-shadow:0 18px 50px rgba(59,130,246,.35)}
+  h1{font-size:clamp(40px,7vw,72px);font-weight:800;letter-spacing:-1.5px;
+     background:linear-gradient(90deg,#fff,#bcd2ff);-webkit-background-clip:text;
+     -webkit-text-fill-color:transparent}
+  .tag{font-size:clamp(16px,2.4vw,21px);color:var(--muted);margin-top:14px}
+  .cta{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{padding:15px 30px;border-radius:13px;font-weight:700;font-size:16px;
+       transition:transform .15s ease, box-shadow .15s ease;border:1px solid transparent}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.primary{background:linear-gradient(180deg,var(--blue),var(--blue2));color:#fff;
+               box-shadow:0 12px 30px rgba(59,130,246,.45)}
+  .btn.ghost{background:transparent;border-color:var(--line);color:var(--text)}
+  .pills{margin-top:30px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .pill{padding:8px 16px;border:1px solid var(--line);border-radius:999px;
+        font-size:14px;color:var(--muted);background:rgba(255,255,255,.03)}
+  .pill b{color:var(--green)}
+
+  /* Sections */
+  section{padding:46px 0}
+  h2{font-size:30px;font-weight:800;text-align:center;margin-bottom:8px}
+  .sub{text-align:center;color:var(--muted);margin-bottom:34px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .card .ic{font-size:30px}
+  .card h3{margin:12px 0 6px;font-size:19px}
+  .card p{color:var(--muted);font-size:15px}
+
+  /* Stats */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;text-align:center}
+  .stat{background:linear-gradient(180deg,#16203a,#111a30);border:1px solid var(--line);
+        border-radius:16px;padding:26px 14px}
+  .stat .n{font-size:40px;font-weight:800;color:var(--green)}
+  .stat .l{color:var(--muted);font-size:14px;margin-top:4px}
+
+  /* Steps */
+  ol.steps{max-width:640px;margin:0 auto;list-style:none;counter-reset:s}
+  ol.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);
+       border-radius:14px;padding:18px 20px 18px 64px;position:relative;margin-bottom:14px}
+  ol.steps li::before{content:counter(s);position:absolute;left:18px;top:50%;
+       transform:translateY(-50%);width:30px;height:30px;border-radius:50%;
+       background:var(--blue);color:#fff;font-weight:700;display:grid;place-items:center}
+  code{background:#0b1226;border:1px solid var(--line);padding:2px 8px;border-radius:6px;
+       font-family:Consolas,monospace;font-size:14px;color:#cfe0ff}
+
+  footer{text-align:center;color:var(--muted);padding:48px 0 64px;border-top:1px solid var(--line);margin-top:30px}
+  .free{color:var(--green);font-weight:700}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img class="logo" src="icon.png" alt="MultiCompress logo">
+    <h1>MultiCompress</h1>
+    <p class="tag">Compress videos, images, audio &amp; PDFs — <b class="free">100% free, 100% offline.</b><br>
+       No watermarks. No uploads. No subscriptions. Ever.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/sourabh-jangid-dev/multicompress/releases">⬇ Download for Windows</a>
+      <a class="btn ghost" href="https://github.com/sourabh-jangid-dev/multicompress">★ View on GitHub</a>
+    </div>
+    <div class="pills">
+      <span class="pill"><b>−87%</b> Video</span>
+      <span class="pill"><b>−86%</b> Images</span>
+      <span class="pill"><b>−82%</b> Audio</span>
+      <span class="pill"><b>−64%</b> PDF</span>
+      <span class="pill">Works offline</span>
+      <span class="pill">Open source (MIT)</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Everything in one tool</h2>
+    <p class="sub">Drop a file. Pick how small you want it. Done.</p>
+    <div class="grid">
+      <div class="card"><div class="ic">🎬</div><h3>Video</h3>
+        <p>H.264 re-encode with smart resolution capping. A 748&nbsp;MB clip → ~94&nbsp;MB.</p></div>
+      <div class="card"><div class="ic">🖼️</div><h3>Images</h3>
+        <p>JPEG/PNG/WebP with auto-resize. 10&nbsp;MB photo → 1.4&nbsp;MB, looks identical.</p></div>
+      <div class="card"><div class="ic">🎵</div><h3>Audio</h3>
+        <p>MP3 re-encode at your chosen bitrate. Huge WAVs shrink ~80%.</p></div>
+      <div class="card"><div class="ic">📄</div><h3>PDF</h3>
+        <p>Downsamples the bloated images inside scans and screenshots.</p></div>
+      <div class="card"><div class="ic">📦</div><h3>Any file</h3>
+        <p>Anything else gets packed into a high-ratio <code>.7z</code> archive.</p></div>
+      <div class="card"><div class="ic">🖱️</div><h3>Drag &amp; drop</h3>
+        <p>Batch dozens of files. Live progress. A Stop button. Remembered settings.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Real numbers</h2>
+    <p class="sub">Tested on real files — not marketing fluff.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">87%</div><div class="l">video size cut</div></div>
+      <div class="stat"><div class="n">0&nbsp;₹</div><div class="l">cost, forever</div></div>
+      <div class="stat"><div class="n">100%</div><div class="l">offline &amp; private</div></div>
+      <div class="stat"><div class="n">5</div><div class="l">file types supported</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Get started in 3 steps</h2>
+    <p class="sub">No Python needed — FFmpeg ships inside.</p>
+    <ol class="steps">
+      <li>Download the latest <code>MultiCompress.zip</code> from the Releases page.</li>
+      <li>Unzip it and run <code>MultiCompress.exe</code> — no installation required.</li>
+      <li>Drag your files in, pick a preset, hit <b>Compress All</b>. That's it. 🎉</li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Built with Python · FFmpeg · Pillow · PyMuPDF — <span class="free">free and open source under the MIT license.</span></p>
+    <p style="margin-top:8px">Made for creators who shouldn't have to pay to make a file smaller.</p>
+  </div>
+</footer>
+
+</body>
+</html>

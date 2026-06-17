@@ -1,0 +1,42 @@
+# pyproject.toml — project metadata + tool configuration.
+# We keep linting/type-checking config here so it's discoverable in one place.
+
+[project]
+name = "multicompress"
+version = "1.0.0"
+description = "MultiCompress — free, offline desktop app to compress video, images, audio, PDFs and files."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+# ------------------------------------------------------------------
+# Ruff — an extremely fast linter (replaces flake8 + isort + more).
+# ------------------------------------------------------------------
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+# We don't lint generated/build folders or the asset script's drawing code.
+exclude = ["build", "dist", ".venv"]
+
+[tool.ruff.lint]
+# A pragmatic rule set: pyflakes (F), pycodestyle (E/W), isort (I), bugbear (B),
+# pyupgrade (UP). Strict enough to be useful, not so strict it's noise.
+select = ["E", "W", "F", "I", "B", "UP"]
+ignore = [
+    "E501",  # line length is handled by the formatter, not enforced hard
+    "B008",  # function calls in argument defaults — fine for our GUI defaults
+]
+
+# ------------------------------------------------------------------
+# Mypy — static type checking. Lenient settings so it's encouraging,
+# not a wall of errors (good for a learning project).
+# ------------------------------------------------------------------
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true   # 3rd-party libs (customtkinter etc.) lack stubs
+warn_unused_ignores = true
+no_implicit_optional = true
+exclude = ["build/", "dist/"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

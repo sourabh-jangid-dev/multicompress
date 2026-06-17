@@ -1,0 +1,7 @@
+# Development & build tools (not required to just run the app).
+-r requirements.txt
+
+pytest                # Unit/integration tests.
+pyinstaller           # Bundles everything into a standalone .exe.
+ruff                  # Fast linter + import sorter.
+mypy                  # Static type checker.

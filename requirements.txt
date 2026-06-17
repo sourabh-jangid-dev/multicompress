@@ -1,0 +1,16 @@
+# ============================================================
+#  RUNTIME DEPENDENCIES  (all 100% free & open-source)
+# ============================================================
+# Install with:  pip install -r requirements.txt
+# ------------------------------------------------------------
+
+Pillow                # Image compression/resizing (JPEG, PNG, WebP).
+pillow-heif           # Adds HEIC/HEIF support (iPhone photos) to Pillow.
+PyMuPDF               # PDF compression (downscales embedded images).
+imageio-ffmpeg        # Bundles a real FFmpeg binary -> video/audio with ZERO manual install.
+py7zr                 # Create .7z archives for generic files/folders.
+customtkinter         # Modern-looking GUI built on Tkinter.
+tkinterdnd2           # Adds drag-and-drop of files onto the window.
+
+# ---- Dev / build tools (not needed just to run) ----
+# pip install -r requirements-dev.txt
