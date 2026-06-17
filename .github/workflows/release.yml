@@ -7,6 +7,10 @@ on:
     tags:
       - "v*"
 
+# Allow the workflow to create a Release and upload the .zip asset.
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: windows-latest
